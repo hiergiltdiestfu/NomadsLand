@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Nomads' Land</name> 
+  <author>Niob Prota</author>
+  <packageId>NiobProta.Nomadism</packageId>
+  <supportedVersions> <!-- the version(s) your mod supports -->
+    <li>1.4</li>
+  </supportedVersions>
+  <description>Nomad's Land adds true nomadism. Pawns with the Nomadic trait will become dissatisfied if they stay settled for too long - time to move on! Nomads are experts in animal handling, but lack the construction skills the average villager has. The trait is also inheritable with the Nomadism gene.\n\nThe mod also adds a Sedentary trait (and gene), where satisfaction grows the older the settlement is, and pawns are more inclined to be good Construction workers and agriculture experts.\n\nFinally, the mod adds a new scenario which forces the Nomad gene into your tribe, encouraging a true nomadic caravan life style.\n\nAlso adds some tents because e.g. the Camping Tents mod gives your nomads a mood debuf when they sleep in tents.\n\nShould be safe to add to savegames. For version 1.4.</description>
+</ModMetaData>

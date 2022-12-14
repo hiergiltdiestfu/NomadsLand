@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef Name="NP_SedentarySettlers">
+    <defName>NP_SedentarySettlers</defName>
+    <label>Settlers</label>
+    <description>You are sedentary, have been forevery. Staying in one place forever is the only way for you to feel truly at home. Being uprooted is the worst thing you can imagine for you and your kin.\n\nNote: All your pawns will have the Sedentary trait.</description>
+    <scenario>
+      <summary>Five settlers attempting to found a village for eternity. As difficult as Lost Tribe, but you do have some talent with running a settlement.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerTribe</factionDef>
+      </playerFaction>
+      <parts>
+	  
+	          <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+		
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>	  
+		
+	  <li Class="ScenPart_ForcedTrait">
+		<def>ForcedTrait</def>
+		<chance>1</chance>
+		<trait>NP_Nomadism_Settler</trait>
+		<context>PlayerStarter</context>
+		<degree>1</degree>
+	  </li>
+
+        <!-- Player starting things -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>200</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Pemmican</thingDef>
+          <count>400</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Knife</thingDef>
+          <stuff>Steel</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Bow_Short</thingDef>
+          <count>1</count>
+        </li>
+		
+		<li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>15</count>
+		  <animalKind>Rat</animalKind>
+          <bondToRandomPlayerPawnChance>0</bondToRandomPlayerPawnChance>
+        </li>		
+		<li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>4</count>
+		  <animalKind>Cat</animalKind>
+          <bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+        </li>
+
+        <!-- Scatter some things near player start -->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>1000</count>
+        </li>
+
+		<li Class="ScenPart_CreateIncident">
+		    <def>CreateIncident</def>
+			<incident>TraderCaravanArrival</incident>
+			<intervalDays>76</intervalDays>
+			<repeat>True</repeat>
+			<occurTick>102</occurTick>
+		</li>
+
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Time to finally settle down forever. Go ahead and plan your village.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+  
+</Defs>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef>
+    <defName>NP_Nomadic</defName>
+    <label>inherently nomadic</label>
+    <labelShortAdj>nomadic</labelShortAdj>
+    <description>Carriers of this gene stem from the ancient nomadic tribes roaming the world.</description>
+    <iconPath>UI/Icons/Genes/Gene_KindInstinct</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>60</displayOrderInCategory>
+	<passOnDirectly>true</passOnDirectly>
+    <forcedTraits>
+      <li>
+        <def>NP_Nomadism_Nomad</def>
+      </li>
+    </forcedTraits>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>        
+        <li><symbol>nomadic</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>NP_Sedentary</defName>
+    <label>inherently sedentary</label>
+    <labelShortAdj>sedentary</labelShortAdj>
+    <description>Carriers of this gene stem from a long lineage of settlers, feeling better at home.</description>
+    <iconPath>UI/Icons/Genes/Gene_KindInstinct</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>60</displayOrderInCategory>
+	<passOnDirectly>false</passOnDirectly>
+    <forcedTraits>
+      <li>
+        <def>NP_Nomadism_Settler</def>
+      </li>
+    </forcedTraits>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>        
+        <li><symbol>sedentary</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+</Defs>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>NP_Nomadism_Nomad</defName>	
+    <commonality>10</commonality>
+    <degreeDatas>
+      <li>
+        <label>Nomadic</label>
+        <description>[PAWN_nameDef] is getting restless when [PAWN_pronoun] stays settled too long in one place. As a natural nomad, [PAWN_pronoun] will feel better when leaving behind [PAWN_possessive] old settlement soon, getting back on the road and finding a new spot to rest for a couple days.</description>
+        <degree>1</degree>
+        <statOffsets>
+		  <!-- Buff stats inherent in nomadic lifestyle - focus on animals and trading -->
+          <MoveSpeed>1.5</MoveSpeed>
+		  <CarryingCapacity>1.0</CarryingCapacity>
+		  <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+		  
+		  <ButcheryFleshSpeed>0.1</ButcheryFleshSpeed>
+		  <ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
+		  <TradePriceImprovement>0.25</TradePriceImprovement>
+		  <TameAnimalChance>0.5</TameAnimalChance>
+		  <TrainAnimalChance>0.9</TrainAnimalChance>
+		  
+		  <!-- Debuf stats inherent in sedentary lifestyle -->
+		  <ConstructionSpeed>-1.75</ConstructionSpeed>
+		  <ConstructSuccessChance>-0.1</ConstructSuccessChance>
+		  <PlantWorkSpeed>-1.75</PlantWorkSpeed>
+		  <!-- HarvestFailChance>2</HarvestFailChance -->
+		  
+        </statOffsets>
+		
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>-4</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>-8</value>
+			</li>
+		</skillGains>
+		
+		<!-- Nomads are a close-knit group -->
+		<socialFightChanceFactor>0.5</socialFightChanceFactor>		
+        
+      </li>  
+	  
+    </degreeDatas>
+	<conflictingTraits>
+      <li>NP_Nomadism_Settler</li>
+	  <li>Undergrounder</li>
+    </conflictingTraits>
+  </TraitDef>  
+  
+  <TraitDef>
+    <defName>NP_Nomadism_Settler</defName>	
+    <commonality>10</commonality>
+    <degreeDatas>
+	  <li>
+        <label>Sedentary</label>
+        <description>[PAWN_nameDef] is comfortable staying in one place. Breaking camp often will unsettle [PAWN_objective] quite a lot. The nomadic lifestyle is not for [PAWN_objective], instead [PAWN_pronoun] will take his time and concentrate on the quiet life in the village.</description>
+        <degree>1</degree>
+        <statOffsets>
+		  <!-- Buff stats inherent in sedentary lifestyle - focus on plants and construction -->
+		  <ConstructionSpeed>0.75</ConstructionSpeed>
+		  <ConstructSuccessChance>0.2</ConstructSuccessChance>
+		  <PlantWorkSpeed>1.75</PlantWorkSpeed>
+		  <!-- HarvestFailChance>-2</HarvestFailChance -->
+		  <TrainAnimalChance>0.05</TrainAnimalChance>		  	  
+		  <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+		  <!--SmithingSpeed>0.5</SmithingSpeed>
+		  <TailoringSpeed>0.5</TailoringSpeed>
+		  <CookSpeed>0.5</CookSpeed-->
+		  
+		  <!-- Debuf stats inherent in nomadic lifestyle, you got time! -->
+          <MoveSpeed>-1.0</MoveSpeed>
+		  <ButcheryFleshSpeed>-0.25</ButcheryFleshSpeed>
+		  <ButcheryFleshEfficiency>-0.5</ButcheryFleshEfficiency>		  
+		  <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>		  
+		  <TameAnimalChance>-1.5</TameAnimalChance>
+		  <AimingDelayFactor>1.5</AimingDelayFactor>
+		  <EatingSpeed>-1.0</EatingSpeed>
+
+		  
+        </statOffsets>
+		
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>-3</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		
+		<!-- Villagers are getting on their neighbours nerves -->
+		<socialFightChanceFactor>1.75</socialFightChanceFactor>		
+        
+      </li>     
+    </degreeDatas>
+	<conflictingTraits>
+      <li>NP_Nomadism_Nomad</li>
+    </conflictingTraits>
+  </TraitDef>
+  
+</Defs>

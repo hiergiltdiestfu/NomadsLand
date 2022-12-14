@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>NP_Nomadism_MoodOffsetNomad</defName>
+    <workerClass>NP_Nomadism.ThoughtWorker_NomadSettledTooLong</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li>NP_Nomadism_Nomad</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>Nomadic Longing</label>
+        <description>I'm getting restless. Do we break camp soon?</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef> 
+  
+  <ThoughtDef>
+    <defName>NP_Nomadism_MoodOffsetSettler</defName>
+    <workerClass>NP_Nomadism.ThoughtWorker_SettlerIsSettled</workerClass>
+	<validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li>NP_Nomadism_Settler</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>Sedentary Satisfaction</label>
+        <description>I feel at home. Hope we stay here forever!</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
