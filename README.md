@@ -1,4 +1,4 @@
-# NomadsLand
+# Nomads' Land
 A RimWorld mod encouraging nomadic play. 
 
 Use the Issues tab to file bugs and feature requests.
