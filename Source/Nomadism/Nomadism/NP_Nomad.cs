@@ -10,31 +10,48 @@ namespace NP_Nomadism
     {        
         public override string PostProcessLabel(Pawn p, string label)
         {
-            float num = this.AgeOfSettlementInDays(p);
-            if (num >= SettledTooLongLevelMaxInDays)
+            float settlementAge = this.AgeOfSettlementInDays(p);
+            if (settlementAge >= SettledTooLongLevelMaxInDays)
             {
                 return base.PostProcessLabel(p, label) + " (desperately)";
             }
 
-            if (num >= SettledTooLongLevel2InDays)
+            if (settlementAge >= SettledTooLongLevel2InDays)
             {
                 return base.PostProcessLabel(p, label) + " (uncomfortably)";
             }
 
-            if (num >= SettledTooLongLevel1InDays)
+            if (settlementAge >= SettledTooLongLevel1InDays)
             {
-                return base.PostProcessLabel(p, label) + " (getting started)";
+                return base.PostProcessLabel(p, label);
             }
 
-            if (num < 0)
+            if (settlementAge < 0)
             {
-                return base.PostProcessLabel(p, label) + " (fulfilled)";
-            }           
+                return "Happy on the road";
+            }
 
-            return base.PostProcessLabel(p, label);
+            return "Happy on the road (afterglow)";
         }
 
-        
+        public override string PostProcessDescription(Pawn p, string description)
+        {
+            float settlementAge = this.AgeOfSettlementInDays(p);
+
+            if (settlementAge < 0)
+            {
+                return "So glad to be on the road again. Hope we get to see more of the world, and don't stay put for so long next time we need to rest.";
+            }
+
+            if (settlementAge < SettledTooLongLevel1InDays)
+            {
+                return "I still feel kind of elated from my time on the road.";
+            }
+
+            return base.PostProcessDescription(p, description);
+        }
+
+
         public override float MoodMultiplier(Pawn p)
         {
             float settlementAge = this.AgeOfSettlementInDays(p);
@@ -56,12 +73,16 @@ namespace NP_Nomadism
 
             if (settlementAge < 0)
             {
-                return RoadMoodFactor;
+                return RoadMoodValue;
+            }
+
+            if (settlementAge < SettledTooLongLevel1InDays)
+            {
+                return RoadMoodValue / Mathf.Max(settlementAge, 1);
             }
 
             return 0;
         }
-
         
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
@@ -83,44 +104,63 @@ namespace NP_Nomadism
             return daysElapsed; 
         }
 
-        private const int SettledTooLongLevel1InDays = 1;//7;
-        private const int SettledTooLongLevel2InDays = 2;//14;
-        private const int SettledTooLongLevelMaxInDays = 3;//30;
+        //settlement age thresholds
+        private const int SettledTooLongLevel1InDays = 7;
+        private const int SettledTooLongLevel2InDays = 20;
+        private const int SettledTooLongLevelMaxInDays = 60;
 
-        private const float Level1MoodFactor = -0.1f;
-        private const float Level2MoodFactor = -0.5f;
-        private const float LevelMaxMoodFactor = -1.5f;
-
-        private const float RoadMoodFactor = 10;
-
+        //mood effect values
+        private const float RoadMoodValue = 10;       // [+10]
+                                                      // [+10, +1.4[                            
+        private const float Level1MoodFactor = -0.5f; // [-3.5, -10[
+        private const float Level2MoodFactor = -0.75f; // [-15, -45[
+        private const float LevelMaxMoodFactor = -1f; // [-60, -inf]                                       
+        
     }
 
     public class ThoughtWorker_SettlerIsSettled : ThoughtWorker
     {
         public override string PostProcessLabel(Pawn p, string label)
         {
-            float num = this.AgeOfSettlementInDays(p);
-            if (num >= SettledLongEnoughLevelMaxInDays)
+            float settlementAge = this.AgeOfSettlementInDays(p);
+            if (settlementAge >= SettledLongEnoughLevelMaxInDays)
             {
                 return base.PostProcessLabel(p, label) + " (fully at peace)";
             }
 
-            if (num >= SettledLongEnoughLevel2InDays)
+            if (settlementAge >= SettledLongEnoughLevel2InDays)
             {
                 return base.PostProcessLabel(p, label) + " (comfortable)";
             }
 
-            if (num >= SettledLongEnoughLevel1InDays)
+            if (settlementAge >= SettledLongEnoughLevel1InDays)
             {
-                return base.PostProcessLabel(p, label) + " (onset)";
+                return base.PostProcessLabel(p, label);
             }
 
-            if (num < 0)
+            if (settlementAge < 0)
             {
-                return base.PostProcessLabel(p, label) + " (uprooted)";
+                return "Uprooted";
+            }
+            
+            return "Uprooted (aftermath)";
+        }
+
+        public override string PostProcessDescription(Pawn p, string description)
+        {
+            float settlementAge = this.AgeOfSettlementInDays(p);
+
+            if (settlementAge < 0)
+            {
+                return "I feel lost and uprooted. Hope we find a spot to rest and settle down soon.";
             }
 
-            return base.PostProcessLabel(p, label);
+            if (settlementAge < SettledLongEnoughLevel1InDays)
+            {
+                return "I still feel lost from my time on the road. Hope we can stay here for now.";
+            }
+
+            return base.PostProcessDescription(p, description);
         }
 
 
@@ -130,7 +170,7 @@ namespace NP_Nomadism
 
             if (settlementAge >= SettledLongEnoughLevelMaxInDays)
             {
-                return LevelMaxMoodFactor;
+                return LevelMaxMoodValue;
             }
 
             if (settlementAge >= SettledLongEnoughLevel2InDays)
@@ -145,7 +185,12 @@ namespace NP_Nomadism
 
             if (settlementAge < 0)
             {
-                return RoadMoodFactor;
+                return RoadMoodValue;
+            }
+
+            if (settlementAge < SettledLongEnoughLevel1InDays)
+            {
+                return RoadMoodValue / Mathf.Max(settlementAge, 1);
             }
 
             return 0;
@@ -162,7 +207,6 @@ namespace NP_Nomadism
         {
             float daysElapsed;
 
-
             Map map = p.Map;
 
             if (map == null || !map.IsPlayerHome) return -1;
@@ -172,15 +216,17 @@ namespace NP_Nomadism
             return daysElapsed;
         }
 
-        private const int SettledLongEnoughLevel1InDays = 1;//7;
-        private const int SettledLongEnoughLevel2InDays = 2;//14;
-        private const int SettledLongEnoughLevelMaxInDays = 3;//30;
+        //settlement age thresholds
+        private const int SettledLongEnoughLevel1InDays = 7;
+        private const int SettledLongEnoughLevel2InDays = 20;
+        private const int SettledLongEnoughLevelMaxInDays = 40;
 
-        private const float Level1MoodFactor = 0.1f;
-        private const float Level2MoodFactor = 0.6f;
-        private const float LevelMaxMoodFactor = 10f;
-
-        private const float RoadMoodFactor = -10;
+        //mood values
+        private const float RoadMoodValue = -10;    // [-10]
+                                                    // [-10, -1.4[
+        private const float Level1MoodFactor = 0.1f; // [+0.7, +2[
+        private const float Level2MoodFactor = 0.25f; // [+5, +10[
+        private const float LevelMaxMoodValue = 10f; // [+10]
 
     }
 
