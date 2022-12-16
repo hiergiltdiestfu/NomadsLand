@@ -93,7 +93,7 @@
         <!-- Game start dialog -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <text>Time to finally settle down forever. Go ahead and plan your village.</text>
+          <text>Time to finally settle down forever - the road isn't for you. Go ahead and plan your village.</text>
           <closeSound>GameStartSting</closeSound>
         </li>
 

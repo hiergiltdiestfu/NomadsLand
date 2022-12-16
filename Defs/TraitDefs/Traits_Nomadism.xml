@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>NP_Nomadism_Nomad</defName>	
-    <commonality>10</commonality>
+    <commonality>1</commonality>
     <degreeDatas>
       <li>
         <label>Nomadic</label>
@@ -58,7 +58,7 @@
   
   <TraitDef>
     <defName>NP_Nomadism_Settler</defName>	
-    <commonality>10</commonality>
+    <commonality>2</commonality>
     <degreeDatas>
 	  <li>
         <label>Sedentary</label>
