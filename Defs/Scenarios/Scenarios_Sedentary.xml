@@ -60,6 +60,11 @@
           <thingDef>Bow_Short</thingDef>
           <count>1</count>
         </li>
+		<li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ShelfSmall</thingDef>
+          <count>5</count>
+        </li>
 		
 		<li Class="ScenPart_StartingAnimal">
           <def>StartingAnimal</def>
@@ -81,13 +86,13 @@
           <count>1000</count>
         </li>
 
-		<li Class="ScenPart_CreateIncident">
+		<!-- li Class="ScenPart_CreateIncident">
 		    <def>CreateIncident</def>
 			<incident>TraderCaravanArrival</incident>
 			<intervalDays>76</intervalDays>
 			<repeat>True</repeat>
 			<occurTick>102</occurTick>
-		</li>
+		</li -->
 
 
         <!-- Game start dialog -->

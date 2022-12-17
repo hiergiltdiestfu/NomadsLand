@@ -48,7 +48,7 @@
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>MedicineHerbal</thingDef>
-          <count>20</count>
+          <count>30</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -71,13 +71,8 @@
 		<li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>WoolSheep</thingDef>
-          <count>80</count>
+          <count>300</count>
         </li>		
-		<li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>WoolMuffalo</thingDef>
-          <count>40</count>
-        </li>
 		
         <li Class="ScenPart_StartingAnimal">
           <def>StartingAnimal</def>
@@ -111,13 +106,13 @@
           <count>500</count>
         </li>
 
-		<li Class="ScenPart_CreateIncident">
+		<!-- li Class="ScenPart_CreateIncident">
 		    <def>CreateIncident</def>
 			<incident>GiveQuest_Random</incident>
 			<intervalDays>28</intervalDays>
 			<repeat>True</repeat>
 			<occurTick>52</occurTick>
-		</li>
+		</li -->
 
 
         <!-- Game start dialog -->
