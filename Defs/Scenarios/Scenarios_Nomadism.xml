@@ -72,6 +72,11 @@
           <def>StartingThing_Defined</def>
           <thingDef>WoolSheep</thingDef>
           <count>300</count>
+        </li>	
+		<li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ShelfSmall</thingDef>
+          <count>5</count>
         </li>		
 		
         <li Class="ScenPart_StartingAnimal">

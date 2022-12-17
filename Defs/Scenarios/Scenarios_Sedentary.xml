@@ -60,11 +60,6 @@
           <thingDef>Bow_Short</thingDef>
           <count>1</count>
         </li>
-		<li Class="ScenPart_StartingThing_Defined">
-          <def>StartingThing_Defined</def>
-          <thingDef>ShelfSmall</thingDef>
-          <count>5</count>
-        </li>
 		
 		<li Class="ScenPart_StartingAnimal">
           <def>StartingAnimal</def>
