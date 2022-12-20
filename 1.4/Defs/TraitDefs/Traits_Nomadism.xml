@@ -8,7 +8,7 @@
       <li>
         <label>Nomadic</label>
         <description>[PAWN_nameDef] is getting restless when [PAWN_pronoun] stays settled too long in one place. As a natural nomad, [PAWN_pronoun] will feel better when leaving behind [PAWN_possessive] old settlement soon, getting back on the road and finding a new spot to rest for a couple days.</description>
-        <degree>0</degree>
+        <degree>1</degree>
         <statOffsets>
 		  <!-- Buff stats inherent in nomadic lifestyle - focus on animals and trading -->
           <MoveSpeed>1.5</MoveSpeed>
@@ -63,7 +63,7 @@
 	  <li>
         <label>Sedentary</label>
         <description>[PAWN_nameDef] is comfortable staying in one place. Breaking camp often will unsettle [PAWN_objective] quite a lot. The nomadic lifestyle is not for [PAWN_objective], instead [PAWN_pronoun] will take [PAWN_possessive] time and concentrate on the quiet life in the village.</description>
-        <degree>0</degree>
+        <degree>1</degree>
         <statOffsets>
 		  <!-- Buff stats inherent in sedentary lifestyle - focus on plants and construction -->
 		  <ConstructionSpeed>0.75</ConstructionSpeed>
