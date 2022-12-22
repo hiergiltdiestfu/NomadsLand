@@ -81,7 +81,7 @@
 		  <ButcheryFleshSpeed>-0.25</ButcheryFleshSpeed>
 		  <ButcheryFleshEfficiency>-0.5</ButcheryFleshEfficiency>		  
 		  <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>		  
-		  <TameAnimalChance>-1.5</TameAnimalChance>
+		  <TameAnimalChance>-0.75</TameAnimalChance>
 		  <AimingDelayFactor>1.5</AimingDelayFactor>
 		  <EatingSpeed>-1.0</EatingSpeed>
 
