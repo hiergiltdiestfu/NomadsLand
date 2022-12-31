@@ -9,7 +9,7 @@
       <summary>Five nomads attempting to find their way around the trading routes of the world with their herd. As difficult as Lost Tribe, but on top you don't get to settle for long.</summary>
       <playerFaction>
         <def>PlayerFaction</def>
-        <factionDef>PlayerTribe</factionDef>
+        <factionDef>NP_NomadsTribe</factionDef>
       </playerFaction>
       <parts>
 	  
@@ -29,7 +29,7 @@
 	  <li Class="ScenPart_ForcedTrait">
 		<def>ForcedTrait</def>
 		<chance>1</chance>
-		<trait>NP_Nomadism_Nomad</trait>
+		<trait>NP_Nomadism_Nomad</trait> <!-- redundant via Faction definition? -->
 		<context>PlayerStarter</context>
 		<degree>1</degree>
 	  </li>
