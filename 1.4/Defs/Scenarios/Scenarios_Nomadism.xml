@@ -10,6 +10,7 @@
       <playerFaction>
         <def>PlayerFaction</def>
         <factionDef>NP_Nomadism_NomadsTribe</factionDef>
+		<!-- Takes care of forced+disallowed traits, too -->
       </playerFaction>
       <parts>
 	  
@@ -26,15 +27,6 @@
           <method>Standing</method>
         </li>	  
 		
-		<!-- The forced trait is now taken care of in the faction/pawn definition -->
-	  <!--li Class="ScenPart_ForcedTrait">
-		<def>ForcedTrait</def>
-		<chance>1</chance>
-		<trait>NP_Nomadism_Nomad</trait> 
-		<context>PlayerStarter</context>
-		<degree>1</degree>
-	  </li-->
-
         <!-- Player starting things -->
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
