@@ -7,6 +7,7 @@
     <validWhileDespawned>true</validWhileDespawned>
     <requiredTraits>
       <li>NP_Nomadism_Nomad</li>
+	  <li>NP_Nomadism_NomadicTrait</li>
     </requiredTraits>
     <stages>
       <li>
@@ -23,6 +24,7 @@
 	<validWhileDespawned>true</validWhileDespawned>
     <requiredTraits>
       <li>NP_Nomadism_Settler</li>
+      <li>NP_Nomadism_SedentaryTrait</li>
     </requiredTraits>
     <stages>
       <li>
