@@ -9,7 +9,7 @@
       <summary>Five settlers attempting to found a village for eternity. As difficult as Lost Tribe, but you do have some talent with running a settlement.</summary>
       <playerFaction>
         <def>PlayerFaction</def>
-        <factionDef>PlayerTribe</factionDef>
+        <factionDef>NP_Nomadism_SettlersTribe</factionDef>
       </playerFaction>
       <parts>
 	  
@@ -26,13 +26,14 @@
           <method>Standing</method>
         </li>	  
 		
-	  <li Class="ScenPart_ForcedTrait">
+		<!-- The forced trait is now taken care of in the faction/pawn definition -->
+	  <!-- li Class="ScenPart_ForcedTrait">
 		<def>ForcedTrait</def>
 		<chance>1</chance>
-		<trait>NP_Nomadism_Settler</trait>
+		<trait>NP_Nomadism_Sedentary</trait>
 		<context>PlayerStarter</context>
 		<degree>1</degree>
-	  </li>
+	  </li -->
 
         <!-- Player starting things -->
         <li Class="ScenPart_StartingThing_Defined">

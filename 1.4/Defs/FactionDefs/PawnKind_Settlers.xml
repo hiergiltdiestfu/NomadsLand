@@ -2,14 +2,11 @@
 <Defs>
 
   <PawnKindDef ParentName="BasePlayerPawnKind">
-    <defName>NP_Nomadism_NomadKind</defName>
+    <defName>NP_Nomadism_SettlerKind</defName>
     <label>member</label>
-	
-	<disallowedTraits>
-		<li>Undergrounder</li>
-	</disallowedTraits>
+
 	<forcedTraits>
-		<NP_Nomadism_Nomad>1</NP_Nomadism_Nomad>
+		<NP_Nomadism_Settler>1</NP_Nomadism_Settler>
 	</forcedTraits>
 	
     <initialResistanceRange>10~18</initialResistanceRange>

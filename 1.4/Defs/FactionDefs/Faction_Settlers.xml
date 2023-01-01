@@ -2,14 +2,14 @@
 <Defs>
 
   <FactionDef ParentName="PlayerFactionBase">
-    <defName>NP_Nomadism_NomadsTribe</defName>
-    <label>Nomadic Tribe</label>
-    <description>Some Nomads on the hike.</description>
+    <defName>NP_Nomadism_SettlersTribe</defName>
+    <label>Settlers Tribe</label>
+    <description>Some Settlers</description>
     <isPlayer>true</isPlayer>
 
-    <pawnSingular>nomad</pawnSingular>
-    <pawnsPlural>nomads</pawnsPlural>
-    <basicMemberKind>NP_Nomadism_NomadKind</basicMemberKind> 
+    <pawnSingular>settler</pawnSingular>
+    <pawnsPlural>settlers</pawnsPlural>
+    <basicMemberKind>NP_Nomadism_SettlerKind</basicMemberKind> 
 
 	<!-- from parent: PlayerTribe -->
 	<categoryTag>Tribal</categoryTag>
