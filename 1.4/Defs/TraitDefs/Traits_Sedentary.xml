@@ -60,10 +60,10 @@
         
       </li>     
     </degreeDatas>
-	<conflictingTraits>
+  	<conflictingTraits>
       <li>NP_Nomadism_Nomad</li>
-	  <li>NP_Nomadism_NomadicTrait</li>
-    </conflictingTraits>
+  	  <li>NP_Nomadism_NomadicTrait</li>
+   </conflictingTraits>
   </TraitDef>
   
 </Defs>
