@@ -30,7 +30,7 @@
 	  <!-- li Class="ScenPart_ForcedTrait">
 		<def>ForcedTrait</def>
 		<chance>1</chance>
-		<trait>NP_Nomadism_Sedentary</trait>
+		<trait>NP_Nomadism_Settler</trait>
 		<context>PlayerStarter</context>
 		<degree>1</degree>
 	  </li -->
