@@ -12,7 +12,7 @@
 	<passOnDirectly>true</passOnDirectly>
     <forcedTraits>
       <li>
-        <def>NP_Nomadism_Nomad</def>
+        <def>NP_Nomadism_NomadicTrait</def>
       </li>
     </forcedTraits>
     <biostatMet>-1</biostatMet>
@@ -34,7 +34,7 @@
 	<passOnDirectly>false</passOnDirectly>
     <forcedTraits>
       <li>
-        <def>NP_Nomadism_Settler</def>
+        <def>NP_Nomadism_SedentaryTrait</def>
       </li>
     </forcedTraits>
     <biostatMet>-1</biostatMet>
