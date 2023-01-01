@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  
+  <TraitDef>
+    <defName>NP_Nomadism_Settler</defName>	
+    <commonality>2</commonality>
+    <degreeDatas>
+	  <li>
+        <label>Sedentary</label>
+        <description>[PAWN_nameDef] is comfortable staying in one place. Breaking camp often will unsettle [PAWN_objective] quite a lot. The nomadic lifestyle is not for [PAWN_objective], instead [PAWN_pronoun] will take [PAWN_possessive] time and concentrate on the quiet life in the village.</description>
+        <degree>1</degree>
+        <statOffsets>
+		  <!-- Buff stats inherent in sedentary lifestyle - focus on plants and construction -->
+		  <ConstructionSpeed>0.75</ConstructionSpeed>
+		  <ConstructSuccessChance>0.2</ConstructSuccessChance>
+		  <PlantWorkSpeed>1.75</PlantWorkSpeed>
+		  <!-- HarvestFailChance>-2</HarvestFailChance -->
+		  <TrainAnimalChance>0.05</TrainAnimalChance>		  	  
+		  <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+		  <!--SmithingSpeed>0.5</SmithingSpeed>
+		  <TailoringSpeed>0.5</TailoringSpeed>
+		  <CookSpeed>0.5</CookSpeed-->
+		  
+		  <!-- Debuf stats inherent in nomadic lifestyle, you got time! -->
+          <MoveSpeed>-1.0</MoveSpeed>
+		  <ButcheryFleshSpeed>-0.25</ButcheryFleshSpeed>
+		  <ButcheryFleshEfficiency>-0.5</ButcheryFleshEfficiency>		  
+		  <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>		  
+		  <TameAnimalChance>-0.75</TameAnimalChance>
+		  <AimingDelayFactor>1.5</AimingDelayFactor>
+		  <EatingSpeed>-1.0</EatingSpeed>
+
+		  
+        </statOffsets>
+		
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>-3</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		
+		<!-- Villagers are getting on their neighbours nerves -->
+		<socialFightChanceFactor>1.75</socialFightChanceFactor>		
+        
+      </li>     
+    </degreeDatas>
+	<conflictingTraits>
+      <li>NP_Nomadism_Nomad</li>
+    </conflictingTraits>
+  </TraitDef>
+  
+</Defs>

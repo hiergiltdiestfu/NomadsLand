@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ScenarioDef Name="NP_NomadicTribe">
-    <defName>NP_NomadicTribe</defName>
+  <ScenarioDef Name="NP_NomadicTribeScen">
+    <defName>NP_NomadicTribeScen</defName>
     <label>Nomadic Tribe</label>
     <description>You are nomads. Staying in one place for too long is difficult for your people, you are born to keep moving - break camp often and keep the caravan going.\n\nNote: All your pawns will have the Nomadic trait. This is a difficult scenario.</description>
     <scenario>
       <summary>Five nomads attempting to find their way around the trading routes of the world with their herd. As difficult as Lost Tribe, but on top you don't get to settle for long.</summary>
       <playerFaction>
         <def>PlayerFaction</def>
-        <factionDef>PlayerTribe</factionDef>
+        <factionDef>NP_Nomadism_NomadsTribe</factionDef>
+		<!-- Takes care of forced+disallowed traits, too -->
       </playerFaction>
       <parts>
 	  
@@ -26,14 +27,6 @@
           <method>Standing</method>
         </li>	  
 		
-	  <li Class="ScenPart_ForcedTrait">
-		<def>ForcedTrait</def>
-		<chance>1</chance>
-		<trait>NP_Nomadism_Nomad</trait>
-		<context>PlayerStarter</context>
-		<degree>1</degree>
-	  </li>
-
         <!-- Player starting things -->
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
