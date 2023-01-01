@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ScenarioDef Name="NP_NomadicTribeScen">
-    <defName>NP_NomadicTribeScen</defName>
+  <ScenarioDef Name="NP_Nomadism_NomadicTribeScen">
+    <defName>NP_Nomadism_01_NomadicTribeScen</defName>
     <label>Nomadic Tribe</label>
     <description>You are nomads. Staying in one place for too long is difficult for your people, you are born to keep moving - break camp often and keep the caravan going.\n\nNote: All your pawns will have the Nomadic trait. This is a difficult scenario.</description>
     <scenario>
