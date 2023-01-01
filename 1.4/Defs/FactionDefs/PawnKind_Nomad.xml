@@ -9,7 +9,7 @@
 		<li>Undergrounder</li>
 	</disallowedTraits>
 	<forcedTraits>
-		<NP_Nomadism_Nomad>1</NP_Nomadism_Nomad>
+		<NP_Nomadism_NomadicTrait>1</NP_Nomadism_NomadicTrait>
 	</forcedTraits>
 	
     <initialResistanceRange>10~18</initialResistanceRange>

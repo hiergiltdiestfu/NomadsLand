@@ -6,7 +6,7 @@
     <label>member</label>
 
 	<forcedTraits>
-		<NP_Nomadism_Settler>1</NP_Nomadism_Settler>
+		<NP_Nomadism_SedentaryTrait>1</NP_Nomadism_SedentaryTrait>
 	</forcedTraits>
 	
     <initialResistanceRange>8~15</initialResistanceRange>

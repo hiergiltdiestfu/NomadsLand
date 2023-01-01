@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <TraitDef>
+  <TraitDef ParentName="NP_Nomadism_NomadicTrait">
     <defName>NP_Nomadism_Nomad</defName>	
+    <commonality>0</commonality>	
+	<!-- DEPRECATED -->
+	<!-- renaming to NP_Nomadism_NomadicTrait in #18 @ v2.x -->	
+  </TraitDef>
+
+  <TraitDef Name="NP_Nomadism_NomadicTrait">
+    <defName>NP_Nomadism_NomadicTrait</defName>	
     <commonality>1</commonality>
     <degreeDatas>
       <li>
@@ -52,6 +59,7 @@
     </degreeDatas>
 	<conflictingTraits>
       <li>NP_Nomadism_Settler</li>
+	  <li>NP_Nomadism_SedentaryTrait</li>
 	  <li>Undergrounder</li>
     </conflictingTraits>
   </TraitDef>  
