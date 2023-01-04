@@ -25,12 +25,12 @@
 		  <ButcheryFleshSpeed>0.1</ButcheryFleshSpeed>
 		  <ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
 		  <TradePriceImprovement>0.25</TradePriceImprovement>
-		  <TameAnimalChance>0.5</TameAnimalChance>
+		  <TameAnimalChance>0.75</TameAnimalChance>
 		  <TrainAnimalChance>0.9</TrainAnimalChance>
 		  
 		  <!-- Debuf stats inherent in sedentary lifestyle -->
-		  <ConstructionSpeed>-1.75</ConstructionSpeed>
-		  <ConstructSuccessChance>-0.1</ConstructSuccessChance>
+		  <ConstructionSpeed>-1.5</ConstructionSpeed>
+		  <ConstructSuccessChance>-0.05</ConstructSuccessChance>
 		  <PlantWorkSpeed>-1.75</PlantWorkSpeed>
 		  <!-- HarvestFailChance>2</HarvestFailChance -->
 		  
@@ -39,11 +39,11 @@
 		<skillGains>
 			<li>
 				<key>Animals</key>
-				<value>4</value>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Construction</key>
-				<value>-4</value>
+				<value>-6</value>
 			</li>
 			<li>
 				<key>Plants</key>
@@ -52,7 +52,7 @@
 		</skillGains>
 		
 		<!-- Nomads are a close-knit group -->
-		<socialFightChanceFactor>0.5</socialFightChanceFactor>		
+		<socialFightChanceFactor>0.33</socialFightChanceFactor>		
         
       </li>  
 	  
