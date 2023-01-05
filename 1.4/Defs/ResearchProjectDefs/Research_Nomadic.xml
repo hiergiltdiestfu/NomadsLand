@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ResearchProjectDef> <!-- todo extract to own xml -->
+    <defName>NP_Nomads_Nomadic_Knowledge</defName>
+    <label>Nomadic Knowledge</label>
+    <description>The basics for a nomadic life.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>6.50</researchViewY>
+	<tags>
+      <li>NP_Nomads_NomadicResearch</li>
+    </tags>
+  </ResearchProjectDef>
+  
+  <ResearchProjectTagDef>
+    <defName>NP_Nomads_NomadicResearch</defName>
+  </ResearchProjectTagDef>
+
+</Defs>

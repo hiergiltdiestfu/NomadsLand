@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>NP_Nomadism_PastureFence</defName>
+    <label>Nomads' fence</label>
+    <description>A very light pasture fence made of intertwined sticks and twigs, useful for very quickly putting up temporary pens. This doesn't provide much cover, and is not very resilient, but your animals will be happy to stay here for a couple nights.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Linked/Fence</texPath> <!-- todo -->
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>Asymmetric</linkType>
+      <linkFlags>
+        <li>Fences</li>
+      </linkFlags>
+      <asymmetricLink>
+        <linkFlags>
+          <li>Wall</li>
+          <li>Rock</li>
+        </linkFlags>
+        <linkToDoors>true</linkToDoors>
+        <drawDoorBorderEast>
+          <color>(0,0,0)</color>
+          <size>(0.04, 0.77)</size>
+          <offset>(0.5, 0, -0.08)</offset>
+        </drawDoorBorderEast>
+        <drawDoorBorderWest>
+          <color>(0,0,0)</color>
+          <size>(0.04, 0.77)</size>
+          <offset>(-0.5, 0, -0.08)</offset>
+        </drawDoorBorderWest>
+      </asymmetricLink>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.35,0.1,0.3,0.7)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/Fence_MenuIcon</uiIconPath> <!-- todo -->
+    <uiIconPathsStuff>
+      <li>
+        <appearance>Metal</appearance> <!-- todo -->
+        <iconPath>Things/Building/Linked/FenceMetal_MenuIcon</iconPath> <!-- todo -->
+      </li>
+    </uiIconPathsStuff>
+    <statBases>
+      <MaxHitPoints>2</MaxHitPoints> <!-- todo went from 40 to 2 -->
+      <WorkToBuild>4</WorkToBuild> <!-- todo went from 70 to 4 -->
+      <Flammability>1.0</Flammability> <!-- todo can increase? -->
+	  <Beauty>-1</Beauty> <!-- default to -1 -->
+    </statBases>
+    <costStuffCount>1</costStuffCount>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost> <!-- todo went from 80 to 55 -->
+    <blockWind>false</blockWind>
+    <fillPercent>0.10</fillPercent> <!-- cover: went from .25 to .1 -->
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <uiOrder>2021</uiOrder>
+    <canOverlapZones>false</canOverlapZones>
+    <fertility>0</fertility>
+    <stuffCategories Inherit="false"> <!-- removed Stony and Metallic -->
+      <li>Woody</li>
+    </stuffCategories>
+    <building>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <ai_chillDestination>false</ai_chillDestination>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <relatedBuildCommands>
+        <li>NP_Nomadism_PenMarker</li>
+        <li>NP_Nomadism_FenceGate</li>
+      </relatedBuildCommands>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Fence_Blueprint</texPath> <!-- todo -->
+        <graphicClass>Graphic_Appearances</graphicClass>
+      </blueprintGraphicData>
+      <paintable>true</paintable>
+    </building>
+	<researchPrerequisites>
+      <li>NP_Nomads_Nomadic_Knowledge</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- todo: preventSkyfallersLandingOn,techLevel,thingCategories  -->
+
+    <ThingDef ParentName="DoorBase">
+    <defName>NP_Nomadism_FenceGate</defName>
+    <label>Nomads' fence gate</label>
+    <description>A very simple gate made of sticks, twigs and twine. Easy to build, but it provides almost no cover and breaks easily.</description>
+    <uiOrder>2031</uiOrder>
+    <statBases>
+      <MaxHitPoints>4</MaxHitPoints> <!-- 20 to 4 -->
+      <WorkToBuild>25</WorkToBuild> <!-- 500 to 25 -->
+      <DoorOpenSpeed>1.0</DoorOpenSpeed> <!-- 1.15 to 1 -->
+	  <Beauty>-1</Beauty> <!-- default to -1 -->
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Door/FenceGate_Mover</texPath> <!-- todo -->
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <!--  no damage marks because they don't move with the door -->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/FenceGate_MenuIcon</uiIconPath> <!-- todo -->
+    <costStuffCount>5</costStuffCount>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>0</staticSunShadowHeight> <!-- disable static shadow -->
+    <blockWind>false</blockWind>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <relatedBuildCommands>
+        <li>NP_Nomadism_PastureFence</li>
+        <li>NP_Nomadism_PenMarker</li>
+      </relatedBuildCommands>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Door/FenceGate_Blueprint</texPath> <!-- todo -->
+        <graphicClass>Graphic_Multi</graphicClass>
+      </blueprintGraphicData>
+      <soundDoorOpenManual>Door_FenceGateManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_FenceGateManual</soundDoorCloseManual>
+      <paintable>true</paintable>
+    </building>
+	<researchPrerequisites>
+      <li>NP_Nomads_Nomadic_Knowledge</li>
+    </researchPrerequisites>
+    <stuffCategories Inherit="false"> <!-- removed Stony and Metallic -->
+      <li>Woody</li>
+    </stuffCategories>	
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>NP_Nomadism_PenMarker</defName>
+    <label>Nomads' pen marker</label>
+    <description>A simple post made of twigs with a simple sign designating an animal pen. It must be placed in an area enclosed by fences, barricades, walls, and doors. You can assign each pen marker a set of animals to accept, and handlers will bring animals to an appropriate pen.</description>
+    <thingClass>Building</thingClass>
+    <tickerType>Long</tickerType>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2066</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.15</fillPercent> <!-- 0.15 to 0.1 -->
+    <pathCost>0</pathCost>
+    <statBases>
+      <MaxHitPoints>3</MaxHitPoints> <!-- 100 to 3 -->
+      <Mass>1</Mass> <!-- 8 to 1 -->
+      <WorkToBuild>20</WorkToBuild> <!-- 600 to 20 -->
+      <Flammability>1.0</Flammability>
+      <Beauty>-1</Beauty> <!-- 0 to -1 -->
+    </statBases>
+    <stuffCategories Inherit="false"> <!-- removed Stony and Metallic -->
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <rotatable>false</rotatable>
+    <fertility>0</fertility>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <relatedBuildCommands>
+        <li>Fence</li>
+        <li>FenceGate</li>
+      </relatedBuildCommands>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <texPath>Things/Building/Furniture/PenMarker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.5, 0.2)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.25,0.6,0.5,0.2)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AnimalPenMarker"/>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <inspectorTabs>
+      <li>ITab_PenAutoCut</li>
+      <li>ITab_PenFood</li>
+      <li>ITab_PenAnimals</li>
+    </inspectorTabs>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <placeWorkers>
+      <li>PlaceWorker_AnimalPenMarker</li>
+    </placeWorkers>
+	<researchPrerequisites>
+      <li>NP_Nomads_Nomadic_Knowledge</li>
+    </researchPrerequisites>	
+  </ThingDef>
+
+</Defs>
