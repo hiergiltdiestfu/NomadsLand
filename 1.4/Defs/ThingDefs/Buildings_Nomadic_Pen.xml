@@ -107,6 +107,7 @@
       <DoorOpenSpeed>1.0</DoorOpenSpeed> <!-- 1.15 to 1 -->
 	  <Beauty>-1</Beauty> <!-- default to -1 -->
     </statBases>
+	<fillPercent>0.15</fillPercent> <!-- cover: went from .75 to .15 -->
     <graphicData>
       <texPath>Things/Building/Door/FenceGate_Mover</texPath> <!-- todo -->
       <graphicClass>Graphic_Multi</graphicClass>
