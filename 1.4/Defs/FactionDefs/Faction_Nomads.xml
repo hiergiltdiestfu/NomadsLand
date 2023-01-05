@@ -38,10 +38,12 @@
     <forageabilityFactor>1.7</forageabilityFactor>
     <startingResearchTags>
       <li>TribalStart</li>
+	  <li>NP_Nomads_NomadicResearch</li>
     </startingResearchTags>
     <startingTechprintsResearchTags>
       <li>TribalStart</li>
       <li>TribalStartTechprints</li>
+	  <li>NP_Nomads_NomadicResearch</li>
     </startingTechprintsResearchTags>
     <apparelStuffFilter>
       <thingDefs>
