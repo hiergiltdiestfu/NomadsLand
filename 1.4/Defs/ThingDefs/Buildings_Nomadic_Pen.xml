@@ -28,8 +28,8 @@
       </damageData>
     </graphicData>	
     <statBases>
-      <MaxHitPoints>2</MaxHitPoints> <!-- todo went from 40 to 2 -->
-      <WorkToBuild>4</WorkToBuild> <!-- todo went from 70 to 4 -->
+      <MaxHitPoints>2</MaxHitPoints> <!-- went from 40 to 2 -->
+      <WorkToBuild>4</WorkToBuild> <!-- went from 70 to 4 -->
       <Flammability>1.0</Flammability> <!-- todo can increase? -->
 	  <Beauty>-1</Beauty> <!-- default to -1 -->
     </statBases>
@@ -37,7 +37,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
-    <pathCost>55</pathCost> <!-- todo went from 80 to 55 -->
+    <pathCost>55</pathCost> <!-- went from 80 to 55 -->
     <blockWind>false</blockWind>
     <fillPercent>0.10</fillPercent> <!-- cover: went from .25 to .1 -->
     <placingDraggableDimensions>1</placingDraggableDimensions>
