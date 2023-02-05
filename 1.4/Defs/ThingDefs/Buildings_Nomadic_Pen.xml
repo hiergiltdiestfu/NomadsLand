@@ -1,51 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>  
 
-  <ThingDef ParentName="BuildingBase">
-    <defName>NP_Nomadism_PastureFence</defName>
+  <ThingDef ParentName="BaseFence">
+    <defName>NP_Nomadism_NomadsFence</defName>
     <label>Nomads' fence</label>
     <description>A very light pasture fence made of intertwined sticks and twigs, useful for very quickly putting up temporary pens. This doesn't provide much cover, and is not very resilient, but your animals will be happy to stay here for a couple nights.</description>
     <thingClass>Building</thingClass>
     <category>Building</category>
+	<uiIconPath>Things/Building/Fences/NomadsFence_icon</uiIconPath>
     <graphicData>
-      <texPath>Things/Building/Linked/Fence</texPath> <!-- todo -->
-      <graphicClass>Graphic_Appearances</graphicClass>
-      <linkType>Asymmetric</linkType>
-      <linkFlags>
-        <li>Fences</li>
-      </linkFlags>
+      <texPath>Things/Building/Fences/NomadsFence</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <asymmetricLink>
-        <linkFlags>
-          <li>Wall</li>
-          <li>Rock</li>
-        </linkFlags>
-        <linkToDoors>true</linkToDoors>
         <drawDoorBorderEast>
           <color>(0,0,0)</color>
-          <size>(0.04, 0.77)</size>
-          <offset>(0.5, 0, -0.08)</offset>
+          <size>(0.04, 0.75)</size>
+          <offset>(0.5, 0, -0.06)</offset>
         </drawDoorBorderEast>
         <drawDoorBorderWest>
           <color>(0,0,0)</color>
-          <size>(0.04, 0.77)</size>
-          <offset>(-0.5, 0, -0.08)</offset>
+          <size>(0.04, 0.75)</size>
+          <offset>(-0.5, 0, -0.06)</offset>
         </drawDoorBorderWest>
       </asymmetricLink>
-      <shadowData>
-        <volume>(0.3, 0.5, 0.3)</volume>
-        <offset>(0,0,-0.23)</offset>
-      </shadowData>
       <damageData>
         <rect>(0.35,0.1,0.3,0.7)</rect>
       </damageData>
-    </graphicData>
-    <uiIconPath>Things/Building/Linked/Fence_MenuIcon</uiIconPath> <!-- todo -->
-    <uiIconPathsStuff>
-      <li>
-        <appearance>Metal</appearance> <!-- todo -->
-        <iconPath>Things/Building/Linked/FenceMetal_MenuIcon</iconPath> <!-- todo -->
-      </li>
-    </uiIconPathsStuff>
+    </graphicData>	
     <statBases>
       <MaxHitPoints>2</MaxHitPoints> <!-- todo went from 40 to 2 -->
       <WorkToBuild>4</WorkToBuild> <!-- todo went from 70 to 4 -->
@@ -84,8 +65,7 @@
         <li>NP_Nomadism_FenceGate</li>
       </relatedBuildCommands>
       <blueprintGraphicData>
-        <texPath>Things/Building/Linked/Fence_Blueprint</texPath> <!-- todo -->
-        <graphicClass>Graphic_Appearances</graphicClass>
+        <texPath>Things/Building/Fences/NomadsFence_blueprint</texPath> 
       </blueprintGraphicData>
       <paintable>true</paintable>
     </building>
@@ -96,7 +76,7 @@
 
   <!-- todo: preventSkyfallersLandingOn,techLevel,thingCategories  -->
 
-    <ThingDef ParentName="DoorBase">
+  <ThingDef ParentName="DoorBase">
     <defName>NP_Nomadism_FenceGate</defName>
     <label>Nomads' fence gate</label>
     <description>A very simple gate made of sticks, twigs and twine. Easy to build, but it provides almost no cover and breaks easily.</description>
@@ -126,8 +106,8 @@
     <blockWind>false</blockWind>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
-      <relatedBuildCommands>
-        <li>NP_Nomadism_PastureFence</li>
+      <relatedBuildCommands Inherit="false">
+        <li>NP_Nomadism_NomadsFence</li>
         <li>NP_Nomadism_PenMarker</li>
       </relatedBuildCommands>
       <blueprintGraphicData>
@@ -179,9 +159,9 @@
       <isInert>true</isInert>
       <ai_chillDestination>false</ai_chillDestination>
       <ai_neverTrashThis>true</ai_neverTrashThis>
-      <relatedBuildCommands>
-        <li>Fence</li>
-        <li>FenceGate</li>
+      <relatedBuildCommands  Inherit="false">
+        <li>NP_Nomadism_NomadsFence</li>
+        <li>NP_Nomadism_FenceGate</li>
       </relatedBuildCommands>
       <paintable>true</paintable>
     </building>
@@ -213,5 +193,67 @@
       <li>NP_Nomads_Nomadic_Knowledge</li>
     </researchPrerequisites>	
   </ThingDef>
+
+  <ThingDef Abstract="True" Name="BaseFence" ParentName="BuildingBase">
+  <!-- from More Vanilla Fences (Jiopaba.Fences) -->
+    <label>fence</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Linked/Fence</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>Asymmetric</linkType>
+      <linkFlags>
+        <li>Fences</li>
+      </linkFlags>
+      <asymmetricLink>
+        <linkFlags>
+          <li>Wall</li>
+          <li>Rock</li>
+        </linkFlags>
+        <linkToDoors>true</linkToDoors>
+      </asymmetricLink>
+      <damageData>
+        <rect>(0.35,0.1,0.3,0.7)</rect>
+      </damageData>
+    </graphicData>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <uiIconPath>Things/Building/Linked/Fence_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>140</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costStuffCount>1</costStuffCount>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>80</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.25</fillPercent>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <fertility>0</fertility>
+    <building>
+      <isInert>true</isInert>
+      <isFence>false</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <ai_chillDestination>false</ai_chillDestination>
+      <relatedBuildCommands>
+        <li>PenMarker</li>
+      </relatedBuildCommands>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Fence_Blueprint</texPath>
+      </blueprintGraphicData>
+    </building>
+  </ThingDef>
+  
 
 </Defs>
