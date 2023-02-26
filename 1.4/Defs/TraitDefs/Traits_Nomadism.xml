@@ -31,7 +31,7 @@
 		  <!-- Debuf stats inherent in sedentary lifestyle -->
 		  <ConstructionSpeed>-1.5</ConstructionSpeed>
 		  <ConstructSuccessChance>-0.05</ConstructSuccessChance>
-		  <PlantWorkSpeed>-1.75</PlantWorkSpeed>
+		  <PlantWorkSpeed>-1.5</PlantWorkSpeed>
 		  <!-- HarvestFailChance>2</HarvestFailChance -->
 		  
         </statOffsets>
