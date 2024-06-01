@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef Name="NP_Nomadism_MixedTribeScen" ParentName="NP_Nomadism_NomadicTribeScen">
+    <defName>NP_Nomadism_03_MixedTribeScen</defName>
+    <label>Transitioning Tribe</label>
+    <description>You are nomads, but some of you have changed recently... they are tired, and would rather stay in one place for a while. Time to figure out how that might work without the tribe falling apart over this.\n\nNote: Most of your pawns will have the Nomadic trait, but some will have the Sedentary trait instead - rarely, a pawn will have both. This is a very spicy scenario - how will you handle the ensuing conflicts?</description>
+    <scenario>
+      <summary>Five nomads attempting to find their way around the trading routes of the world with their herd - but some of them want to settle down. Even more difficult than Nomadic Tribe.</summary>
+	  <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerTribe</factionDef>
+      </playerFaction>
+      <parts>
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Time to rest for a couple days before we get back on the road to our next trading appointment. But some of you might not want to leave so soon anymore, and settle down instead - can you prevent the tribe from falling apart?</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+		
+	    <li Class="ScenPart_ForcedTrait">
+			<def>ForcedTrait</def>
+			<chance>0.2</chance>
+			<trait>NP_Nomadism_SedentaryTrait</trait>
+			<context>PlayerStarter</context>
+			<degree>1</degree>
+        </li>
+		<li Class="ScenPart_ForcedTrait">
+			<def>ForcedTrait</def>
+			<chance>0.9</chance>
+			<trait>NP_Nomadism_NomadicTrait</trait>
+			<context>PlayerStarter</context>
+			<degree>1</degree>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+  
+</Defs>
