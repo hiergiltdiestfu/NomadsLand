@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef Name="NP_Nomadism_NomadicTribeScen">
+    <defName>NP_Nomadism_01_NomadicTribeScen</defName>
+    <label>Nomadic Tribe</label>
+    <description>You are nomads. Staying in one place for too long is difficult for your people, you are born to keep moving - break camp often and keep the caravan going.\n\nNote: All your pawns will have the Nomadic trait. This is a difficult scenario.</description>
+    <scenario>
+      <summary>Five nomads attempting to find their way around the trading routes of the world with their herd. As difficult as Lost Tribe, but on top you don't get to settle for long.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>NP_Nomadism_NomadsTribe</factionDef>
+		<!-- Takes care of forced+disallowed traits, too -->
+      </playerFaction>
+      <parts>
+	  
+	          <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+		
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>	  
+		
+        <!-- Player starting things -->
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>2000</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Pemmican</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Ikwa</thingDef>
+          <stuff>Steel</stuff>
+		  <count>2</count>
+        </li>
+		<li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Bow_Great</thingDef>
+          <count>3</count>
+        </li>
+		
+		<li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Bedroll</thingDef>
+          <stuff>WoolMuffalo</stuff>
+		  <count>5</count>
+        </li>
+		<li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WoolSheep</thingDef>
+          <count>300</count>
+        </li>	
+		<li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ShelfSmall</thingDef>
+		  <stuff>WoodLog</stuff>
+          <count>5</count>
+        </li>		
+		
+        <li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>4</count>
+		  <animalKind>Muffalo</animalKind>
+          <bondToRandomPlayerPawnChance>0.1</bondToRandomPlayerPawnChance>
+        </li>
+		<li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>15</count>
+		  <animalKind>Sheep</animalKind>
+          <bondToRandomPlayerPawnChance>0.01</bondToRandomPlayerPawnChance>
+        </li>
+		<li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>5</count>
+		  <animalKind>Dromedary</animalKind>
+          <bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+        </li>		
+		<li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>4</count>
+		  <animalKind>Wolf_Timber</animalKind>
+          <bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+        </li>
+
+        <!-- Scatter some things near player start -->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>500</count>
+        </li>
+
+		<!-- li Class="ScenPart_CreateIncident">
+		    <def>CreateIncident</def>
+			<incident>GiveQuest_Random</incident>
+			<intervalDays>28</intervalDays>
+			<repeat>True</repeat>
+			<occurTick>52</occurTick>
+		</li -->
+
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Time to rest for a couple days before we get back on the road to our next trading appointment. Fix up a pen for your herd, and go train your dogs - you'll need their help with guarding the tent camp.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+  
+</Defs>
