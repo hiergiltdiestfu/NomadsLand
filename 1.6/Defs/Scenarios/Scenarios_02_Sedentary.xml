@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ScenarioDef Name="NP_Nomadism_SedentarySettlersScen">
+  <ScenarioDef Name="NP_Nomadism_SedentarySettlersScen" ParentName="ScenarioBase">
     <defName>NP_Nomadism_02_SedentarySettlersScen</defName>
     <label>Settlers</label>
     <description>You are sedentary, have been forevery. Staying in one place forever is the only way for you to feel truly at home. Being uprooted is the worst thing you can imagine for you and your kin.\n\nNote: All your pawns will have the Sedentary trait.</description>
