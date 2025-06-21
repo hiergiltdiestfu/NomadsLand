@@ -40,7 +40,6 @@
     <pathCost>55</pathCost> <!-- went from 80 to 55 -->
     <blockWind>false</blockWind>
     <fillPercent>0.10</fillPercent> <!-- cover: went from .25 to .1 -->
-    <placingDraggableDimensions>1</placingDraggableDimensions>
     <tickerType>Never</tickerType>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
@@ -231,7 +230,6 @@
     <pathCost>80</pathCost>
     <blockWind>false</blockWind>
     <fillPercent>0.25</fillPercent>
-    <placingDraggableDimensions>1</placingDraggableDimensions>
     <tickerType>Never</tickerType>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
