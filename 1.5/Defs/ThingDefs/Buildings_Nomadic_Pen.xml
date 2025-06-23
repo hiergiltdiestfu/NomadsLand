@@ -112,7 +112,7 @@
       </relatedBuildCommands>
       <blueprintGraphicData>
         <texPath>Things/Building/Door/NomadsFenceGate_blueprint</texPath>
-        <graphicClass>Graphic_Multi</graphicClass>
+        <graphicClass>Graphic_Single</graphicClass>
       </blueprintGraphicData>
       <soundDoorOpenManual>Door_FenceGateManual</soundDoorOpenManual>
       <soundDoorCloseManual>Door_FenceGateManual</soundDoorCloseManual>
