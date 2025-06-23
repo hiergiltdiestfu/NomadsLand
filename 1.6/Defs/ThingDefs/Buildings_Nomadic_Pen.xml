@@ -89,8 +89,8 @@
     </statBases>
 	<fillPercent>0.15</fillPercent> <!-- cover: went from .75 to .15 -->
     <graphicData>
-      <texPath>Things/Building/Door/FenceGate_Mover</texPath> <!-- todo -->
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/Door/NomadsFenceGate_mover</texPath> 
+      <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.3, 0.5, 0.3)</volume>
       </shadowData>
@@ -99,7 +99,7 @@
         <enabled>false</enabled>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Building/Door/FenceGate_MenuIcon</uiIconPath> <!-- todo -->
+    <uiIconPath>Things/Building/Door/NomadsFenceGate</uiIconPath>
     <costStuffCount>5</costStuffCount>
     <holdsRoof>false</holdsRoof>
     <staticSunShadowHeight>0</staticSunShadowHeight> <!-- disable static shadow -->
@@ -111,8 +111,8 @@
         <li>NP_Nomadism_PenMarker</li>
       </relatedBuildCommands>
       <blueprintGraphicData>
-        <texPath>Things/Building/Door/FenceGate_Blueprint</texPath> <!-- todo -->
-        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>Things/Building/Door/NomadsFenceGate_blueprint</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
       </blueprintGraphicData>
       <soundDoorOpenManual>Door_FenceGateManual</soundDoorOpenManual>
       <soundDoorCloseManual>Door_FenceGateManual</soundDoorCloseManual>
