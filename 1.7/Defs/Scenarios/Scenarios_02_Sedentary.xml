@@ -4,9 +4,9 @@
   <ScenarioDef Name="NP_Nomadism_SedentarySettlersScen" ParentName="ScenarioBase">
     <defName>NP_Nomadism_02_SedentarySettlersScen</defName>
     <label>Settlers</label>
-    <description>You are sedentary, have been forevery. Staying in one place forever is the only way for you to feel truly at home. Being uprooted is the worst thing you can imagine for you and your kin.\n\nNote: All your pawns will have the Sedentary trait.</description>
+    <description>You are sedentary, have been forever. Staying in one place forever is the only way for you to feel truly at home. Being uprooted is the worst thing you can imagine for you and your kin.\n\nNote: All your pawns will have the Sedentary trait. As difficult as Lost Tribe, but you have some more talent for running a settlement and resettling is gonna hurt.</description>
     <scenario>
-      <summary>Five settlers attempting to found a village for eternity. As difficult as Lost Tribe, but you do have some talent with running a settlement.</summary>
+      <summary>Five settlers attempting to build a village for eternity.</summary>
       <playerFaction>
         <def>PlayerFaction</def>
         <factionDef>NP_Nomadism_SettlersTribe</factionDef>
