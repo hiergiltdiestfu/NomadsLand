@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef ParentName="NP_Nomadism_NomadicTrait">
+    <defName>NP_Nomadism_Nomad</defName>	
+    <commonality>0</commonality>	
+	<!-- DEPRECATED -->
+	<!-- renaming to NP_Nomadism_NomadicTrait in #18 @ v2.x -->	
+  </TraitDef>
+
+  <TraitDef Name="NP_Nomadism_NomadicTrait">
+    <defName>NP_Nomadism_NomadicTrait</defName>	
+    <commonality>1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Nomadic</label>
+        <description>[PAWN_nameDef] is getting restless when [PAWN_pronoun] stays settled too long in one place. As a natural nomad, [PAWN_pronoun] will feel better when leaving behind [PAWN_possessive] old settlement soon, getting back on the road and finding a new spot to rest for a couple days.</description>
+        <degree>1</degree>
+        <statOffsets>
+		  <!-- Buff stats inherent in nomadic lifestyle - focus on animals and trading -->
+          <MoveSpeed>1.5</MoveSpeed>
+		  <CarryingCapacity>1.0</CarryingCapacity>
+		  <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+		  
+		  <ButcheryFleshSpeed>0.1</ButcheryFleshSpeed>
+		  <ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
+		  <TradePriceImprovement>0.25</TradePriceImprovement>
+		  <TameAnimalChance>0.75</TameAnimalChance>
+		  <TrainAnimalChance>0.9</TrainAnimalChance>
+		  
+		  <!-- Debuf stats inherent in sedentary lifestyle -->
+		  <ConstructionSpeed>-1.5</ConstructionSpeed>
+		  <ConstructSuccessChance>-0.05</ConstructSuccessChance>
+		  <PlantWorkSpeed>-1.5</PlantWorkSpeed>
+		  <!-- HarvestFailChance>2</HarvestFailChance -->
+		  
+        </statOffsets>
+		
+		<skillGains>
+			<Animals>6</Animals>
+			<Construction>-6</Construction>
+			<Plants>-8</Plants>
+		</skillGains>
+		
+		<!-- Nomads are a close-knit group -->
+		<socialFightChanceFactor>0.33</socialFightChanceFactor>		
+        
+      </li>  
+	  
+    </degreeDatas>
+	<conflictingTraits>
+      <li>NP_Nomadism_Settler</li>
+	  <li>NP_Nomadism_SedentaryTrait</li>
+	  <li>Undergrounder</li>
+    </conflictingTraits>
+  </TraitDef>  
+  
+</Defs>
